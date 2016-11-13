@@ -360,4 +360,4 @@ $(document).ready(function () {
   });
 });
   //to make the buttons not stay focused after click on mobile
-  $('.key').mouseup(function() { this.blur(); });
+  $('.key').mouseup(function() { $('.key').blur(); });
