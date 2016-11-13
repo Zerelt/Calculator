@@ -359,3 +359,5 @@ $(document).ready(function () {
     $('#display').scrollLeft(10e10);
   });
 });
+  //to make the buttons not stay focused after click on mobile
+  $('.key').mouseup(function() { this.blur(); });
