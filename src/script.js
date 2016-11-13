@@ -6,7 +6,7 @@ $(document).ready(function () {
   //  var counter = 0;
 
   $(document).keydown(function (e) {
-    console.log(e.keyCode);
+    // console.log(e.keyCode);
     if (e.keyCode == 96) {
       $('#0').click();
     }
@@ -159,7 +159,7 @@ $(document).ready(function () {
       for (var i = 0; i <= arr2.length - 1; i++) {
         if (arr2[i] === '.') {
           counter++;
-          console.log(counter);
+          // console.log(counter);
         }
       }
 
@@ -184,10 +184,10 @@ $(document).ready(function () {
           $('#span').append('.');
           counter++;
         }
-        console.log(true);
-        console.log(counter);
+        // console.log(true);
+        // console.log(counter);
       } else {
-        console.log(false);
+        // console.log(false);
         return false;
       }
     }
@@ -263,8 +263,8 @@ $(document).ready(function () {
         if (arr[arr.length - 1] === ending[i] && arr[arr.length - 1] !== '*') {
 
           if (arr[arr.length - 2] !== ')') {
-            console.log('wtf');
-            console.log(arr[arr.length - 2]);
+            // console.log('wtf');
+            // console.log(arr[arr.length - 2]);
             arr.pop();
             arr.push(')');
             arr.push(')');
@@ -358,8 +358,8 @@ $(document).ready(function () {
   $('.key').on('click', function () {
     $('#display').scrollLeft(10e10);
   });
-});
   //to make the buttons not stay focused after click on mobile
-  $('.key').on('click',function() {
-    setTimeout(function(){$('.key').blur(); },200);
+  $('.key').on('mouseup',function() {
+    this.blur();
   });
+});
