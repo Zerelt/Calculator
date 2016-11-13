@@ -50,6 +50,7 @@ $(document).ready(function () {
       $('#dot').click();
     }
     if (e.keyCode == 111) {
+      e.preventDefault();
       $('#divide').click();
     }
     if (e.keyCode == 13) {
@@ -63,6 +64,10 @@ $(document).ready(function () {
       /*http://stackoverflow.com/questions/11112127/prevent-backspace-from-navigating-back-with-jquery-like-googles-homepage*/
       /*note that you can't prevent default action if you use    keyup   instead of keydown, because the keyup event is fired only after the default action for the key has been executed*/
       $('#ce').click();
+    }
+    if(e.keyCode == 35) {
+      e.preventDefault();
+      $('#root').click();
     }
   });
 

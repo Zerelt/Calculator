@@ -3,6 +3,7 @@
   /*   min-width: 425px; */
   background: url("./images/bgImage.jpg") no-repeat center center fixed;
   background-size: cover;
+  min-height:100%;
   /*
   or https://wallpaperscraft.com/image/bright_background_light_texture_50370_1920x1080.jpg
   or https://wallpaperscraft.com/image/skin_joints_texture_dark_50436_1920x1080.jpg
@@ -46,7 +47,7 @@
 
 .column {
   display: inline-block;
-  border: px solid red;
+  /*border: px solid red;*/
   padding-top: 3vmin;
   vertical-align: top;
   margin: 0px -2px;
@@ -100,6 +101,7 @@
   background-color: aliceblue;
   /* overflow: scroll; */
   overflow-x: scroll;
+  overflow-y: hidden;/*new*/
   -ms-overflow-style:none;/*hide scrollbars in IE 10+*/
   overflow: -moz-scrollbars-none; /*for firefox*/
 /*  position:relative;*/
@@ -135,6 +137,12 @@
   /*1.8*/
   background-color: rgba(15, 153, 100, 1);
   color: white;
+  margin:0;/*new*/
+  padding:0;/*new*/
+  -webkit-user-select: none;  /*new*/
+  -moz-user-select: none;     /*new*/
+  -ms-user-select: none;      /*new*/
+  user-select: none;     /*new*/
 }
 
 .key:hover {
@@ -154,20 +162,23 @@
 }
 
 #plus {
-  padding: 5.01vmin 0px 5.01vmin 0px;
+/*  padding: 5.01vmin 0px 5.01vmin 0px;*//*new*/
+  min-height:19.6vmin;
+  height:calc(19.6vmin + 2px);/*new*/
+  line-height:calc(19.6vmin + 2px);/*new*/
 }
 
 
 
 @media (min-width: 768px) and (max-width: 940px) {
   #plus {
-  padding: 5.025vmin 0px 5.025vmin 0px;
+/*  padding: 5.025vmin 0px 5.025vmin 0px;*//*new*/
 }
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
   #plus {
-    padding: 5.12vmin 0px 5.12vmin 0px;
+/*    padding: 5.12vmin 0px 5.12vmin 0px;*//*new*/
   }
 }
 
@@ -198,6 +209,7 @@
     font-size: 5.5vh;
     line-height: 6.5vh;
     padding: 0.5vh 1vh 0.8vh 1vh;
+    overflow-y:hidden;/*new*/
   }
   .column {
     margin-top: 1vh;
@@ -210,6 +222,9 @@
     line-height: 11vh;
   }
   #plus {
-    padding: 5.635vh 0vh 5.635vh 0vh;
+/*    padding: 5.635vh 0vh 5.635vh 0vh;*//*new*/
+    min-height:22vh;/*new*/
+    height:calc(22vh + 2px);/*new*/
+    line-height:calc(22vh + 2px);/*new*/
   }
 }
