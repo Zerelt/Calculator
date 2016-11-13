@@ -1,3 +1,6 @@
+html{
+  min-height:100%;
+}
 #body {
   text-align: center;
   /*   min-width: 425px; */
