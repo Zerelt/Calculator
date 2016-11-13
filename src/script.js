@@ -360,6 +360,6 @@ $(document).ready(function () {
   });
 });
   //to make the buttons not stay focused after click on mobile
-  $('.key').on('mouseup',function() {
+  $('.key').on('click',function() {
     setTimeout(function(){$('.key').blur(); },200);
   });
