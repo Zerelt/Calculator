@@ -4,7 +4,7 @@ html{
 #body {
   text-align: center;
   /*   min-width: 425px; */
-  background: url("./images/bgImage.jpg") no-repeat center center fixed;
+  background: url("./images/calcBg.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height:100%;
   /*
@@ -37,15 +37,15 @@ html{
   margin-top: 14vh;
   margin-left: auto;
   margin-right: auto;
-  border: 0.3vmin solid rgba(55, 25, 23, 0.4);
-  border-radius: px;
+  border: 0.3vmin solid rgba(55, 25, 23, 0.1);
+  /*border-radius: px;*/
   background-color: rgba(144, 49, 55, 0.9);
   background-color: rgba(144, 0, 50, 0.88);
-  box-shadow: 0px 0px 8px 4px #622929;
-  -webkit-box-shadow: 0px 0px 8px 4px #622929;
-  -moz-box-shadow: 0px 0px 8px 4px #622929;
-  -ms-box-shadow: 0px 0px 8px 4px #622929;
-  -o-box-shadow: 0px 0px 8px 4px #622929;
+  box-shadow: 1px 1px 6px 2px rgba(98,41,41,0.85);
+  -webkit-box-shadow: 1px 1px 6px 2px rgba(98,41,41,0.85);
+  -moz-box-shadow: 1px 1px 6px 2px rgba(98,41,41,0.85);
+  -ms-box-shadow: 1px 1px 6px 2px rgba(98,41,41,0.85);
+  -o-box-shadow: 1px 1px 6px 2px rgba(98,41,41,0.85);
 }
 
 .column {
@@ -54,8 +54,8 @@ html{
   padding-top: 3vmin;
   vertical-align: top;
   /*margin: 0px -2px;*//*this is necessary to make the columns
-  align in development mode but it's not necessary when the 
-  site is live, and in fact it makes the first 3 columns 
+  align in development mode but it's not necessary when the
+  site is live, and in fact it makes the first 3 columns
   overlap by 2 px. (??) */
 }
 
@@ -182,7 +182,11 @@ html{
 }
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 767px) {
+  #calculator{
+    height:76vh;
+    width:52vh;
+  }
   #plus {
 /*    padding: 5.12vmin 0px 5.12vmin 0px;*//*new*/
   }
@@ -198,7 +202,7 @@ html{
   #calculator {
     height: 84vh;
     /*    min-height:340px;*/
-    width: 50vh;
+    width: 52vh; /*new was 50vh*/
     margin-top: 10vh;
   }
   #title {
@@ -221,16 +225,16 @@ html{
     margin-top: 1vh;
   }
   .key {
-    height: 11vh;
-    width: 11vh;
+    height: 10vh; /*11vh*/
+    width: 10vh; /*11vh*/
     font-size: 6.5vh;
     font-weight: 100;
-    line-height: 11vh;
+    line-height: 10vh; /*11vh*/
   }
   #plus {
 /*    padding: 5.635vh 0vh 5.635vh 0vh;*//*new*/
-    min-height:22vh;/*new*/
-    height:calc(22vh + 2px);/*new*/
-    line-height:calc(22vh + 2px);/*new*/
+    min-height:20vh;/*new  was 22vh*/
+    height:calc(20vh + 2px);/*new was 22vh+2px*/
+    line-height:calc(20vh + 2px);/*new was 22vh+2px*/
   }
 }

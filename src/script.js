@@ -204,6 +204,10 @@ $(document).ready(function () {
     if (((arr2[arr2.length - 1] !== '+') && (arr2[arr2.length - 1] !== '-') && (arr2[arr2.length - 1] !== '*') && (arr2[arr2.length - 1] !== '/') && (arr2[arr2.length - 1] !== '.')) && ((eval(arr2) < 0) === true)) {
       $('#hidden').text("Invalid Input");
       $('#span').text("Invalid Input");
+      setTimeout( function () {
+        $('#hidden').empty();
+        $('#span').empty();
+      }, 500);
     } else if (((arr2[arr2.length - 1] === '+') || (arr2[arr2.length - 1] === '-') || (arr2[arr2.length - 1] === '*') || (arr2[arr2.length - 1] === '/') || (arr2[arr2.length - 1] === '.'))) {
       var sq = Math.sqrt(eval($('#hidden').text().slice(0, -1)));
       $('#hidden').empty();
